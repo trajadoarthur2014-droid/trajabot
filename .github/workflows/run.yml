@@ -1,12 +1,8 @@
-name: Ligar Bot
+name: core
 on:
-  push:
-    branches:
-      - "bWFpbg==" # MndhbA==
   workflow_dispatch:
-
 jobs:
-  run:
+  bot:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
