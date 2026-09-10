@@ -13,7 +13,8 @@ jobs:
         with:
           node-version: 20
       - run: npm install
-      - run: node index.js
+      - run: node trajabot/index.js
+
         env:
           TOKEN: ${{ secrets.TOKEN }}
 
