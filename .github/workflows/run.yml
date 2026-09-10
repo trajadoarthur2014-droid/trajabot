@@ -1,8 +1,8 @@
 # START
 "name": "Ligar Bot"
 "on":
-  "push":
-    "branches":
+  "main":
+    "main":
       - "main"
   "workflow_dispatch": {}
 
