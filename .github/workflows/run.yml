@@ -1,7 +1,7 @@
 NAME: Ligar Bot
 ON:
   PUSH:
-    BRANCHES: [ main ]
+    main: [ main ]
   WORKFLOW_DISPATCH:
 
 JOBS:
