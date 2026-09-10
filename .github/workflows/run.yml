@@ -1,8 +1,7 @@
-# START
 "name": "Ligar Bot"
 "on":
-  "main":
-    "main":
+  "push":
+    "branches":
       - "main"
   "workflow_dispatch": {}
 
@@ -18,6 +17,7 @@
       - "run": "node index.js"
         "env":
           "TOKEN": "${{ secrets.TOKEN }}"
+
 # END
 
 
