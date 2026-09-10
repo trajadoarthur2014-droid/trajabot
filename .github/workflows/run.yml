@@ -1,19 +1,21 @@
-nAmE: core
-oN:
-  wOrKfLoW_dIsPaTcH:
-jObS:
-  bOt:
-    rUnS-oN: ubuntu-latest
-    sTePs:
-      - uSeS: actions/checkout@v4
-      - uSeS: actions/setup-node@v4
-        wItH:
-          node-version: 20
-      - rUn: npm install
-      - rUn: node index.js
-        eNv:
-          TOKEN: ${{ secrets.TOKEN }}
+name: Ligar Bot
+on:
+  push:
+    branches:
+      - main
 
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: node index.js
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
 
 # END
 
