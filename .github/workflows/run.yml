@@ -1,20 +1,24 @@
-NAME: Ligar Bot
-ON:
-  PUSH:
-    main: [ main ]
-  WORKFLOW_DISPATCH:
+# START
+"name": "Ligar Bot"
+"on":
+  "push":
+    "branches":
+      - "main"
+  "workflow_dispatch": {}
 
-JOBS:
-  RUN:
-    RUNS-ON: ubuntu-latest
-    STEPS:
-      - USES: actions/checkout@v4
-      - USES: actions/setup-node@v4
-        WITH:
-          NODE-VERSION: 20
-      - RUN: npm install
-      - RUN: node index.js
-        ENV:
-          TOKEN: ${{ secrets.TOKEN }}
+"jobs":
+  "run":
+    "runs-on": "ubuntu-latest"
+    "steps":
+      - "uses": "actions/checkout@v4"
+      - "uses": "actions/setup-node@v4"
+        "with":
+          "node-version": 20
+      - "run": "npm install"
+      - "run": "node index.js"
+        "env":
+          "TOKEN": "${{ secrets.TOKEN }}"
+# END
+
 
 
